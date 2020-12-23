@@ -9,6 +9,12 @@ document.querySelector("#child").addEventListener("click", () => {
   console.log("child clicked");
 });
 /***************************/
+//Event propogation in capturing is
+//from me  to my parents
+//where i am the element where event
+// was triggered
+/*********************/
+/***************************/
 //If u clicked the child div
 //Output:
 //child clicked
