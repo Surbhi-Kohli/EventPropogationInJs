@@ -1,10 +1,27 @@
 import "./styles.css";
+document.querySelector("#grandparent").addEventListener("click", () => {
+  console.log("grandparent clicked");
+});
+document.querySelector("#parent").addEventListener("click", () => {
+  console.log("parent clicked");
+});
+document.querySelector("#child").addEventListener("click", () => {
+  console.log("child clicked");
+});
+/***************************/
+//If u clicked the child div
+//Output:
+//child clicked
+//parent clicked
+//grandparent clicked
 
-// document.getElementById("app").innerHTML = `
-// <h1>Hello Vanilla!</h1>
-// <div>
-//   We use the same configuration as Parcel to bundle this sandbox, you can find more
-//   info about Parcel
-//   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-// </div>
-// `;
+/**********************/
+//if u clicked te grandparent div
+//output:
+//grandparent clicked
+
+/****************/
+//if u clicked the parent
+//output:
+//parent clicked
+//grandparent clicked
