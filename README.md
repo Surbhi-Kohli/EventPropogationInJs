@@ -30,3 +30,9 @@ The order of event propagation is:
 If you call e.stopPropagation() in the capture phase (by setting the addEventListener()'s 3rd argument to true), it stops at 1, so 2 & 3 cannot receive it.
 
 If you call e.stopPropagation() in the bubble phase (by setting the addEventListener()'s 3rd argument to false or just not assign it), the 1 & 2 already complete, so it just prevents the event from bubbling up from the level where you call stopPropagation()
+
+## Difference between stopPropagation() and stopImmediatePropagation()
+
+stopPropagation will prevent any parent handlers from being executed 
+stopImmediatePropagation will prevent any parent handlers and also any other handlers from executing.
+
