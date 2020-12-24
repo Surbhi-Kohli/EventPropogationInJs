@@ -23,9 +23,9 @@ It does not, however, prevent any default behaviors from occurring.
 ## Does stopPropagation stop the event from propagating in the capture phase ?
 The order of event propagation is:
 
-# i Capture (down)
-# ii Target
-# iii Bubble (up).
+## i Capture (down)
+## ii Target
+## iii Bubble (up).
 
 If you call e.stopPropagation() in the capture phase (by setting the addEventListener()'s 3rd argument to true), it stops at 1, so 2 & 3 cannot receive it.
 
