@@ -36,3 +36,31 @@ If you call e.stopPropagation() in the bubble phase (by setting the addEventList
 stopPropagation will prevent any parent handlers from being executed 
 stopImmediatePropagation will prevent any parent handlers and also any other handlers from executing.
 
+ ## Quick Quizzzzzzzzz
+ What would be the output on the button click? (Event Handling)
+ <div id="grandfather">
+  <div id="father">
+    <!-- What would be the output in the console if the following button#child is clicked -->
+    <button id="child">Click Me</button>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function bindEvent(id) {
+    document
+      .getElementById(id)
+      .addEventListener(
+        "click",
+        (e) => console.log(e.target.getAttribute("id")),
+        true
+      );
+  }
+  
+  bindEvent("grandfather");
+  bindEvent("father");
+  bindEvent("child");
+</script>
+option a. child father grandfather   b.grandfather father child    c.child child child    d.undefined undefined undefined
+ ### ans-c
+ ### Output would always be child because event.target is a reference to the object onto which the event was dispatched. 
+  ###  To get the current HTML Element whose handler is being executed, use the property event.currentTarget.
