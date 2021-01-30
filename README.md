@@ -38,7 +38,8 @@ stopImmediatePropagation will prevent any parent handlers and also any other han
 
  ## Quick Quizzzzzzzzz
  What would be the output on the button click? (Event Handling)
- <div id="grandfather">
+  ```
+  <div id="grandfather">
   <div id="father">
     <!-- What would be the output in the console if the following button#child is clicked -->
     <button id="child">Click Me</button>
@@ -60,6 +61,7 @@ stopImmediatePropagation will prevent any parent handlers and also any other han
   bindEvent("father");
   bindEvent("child");
 </script>
+```
 option a. child father grandfather   b.grandfather father child    c.child child child    d.undefined undefined undefined
  ### ans-c
  ### Output would always be child because event.target is a reference to the object onto which the event was dispatched. 
